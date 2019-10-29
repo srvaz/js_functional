@@ -11,8 +11,8 @@ export const partialize = (fn, ...args) => fn.bind(null, ...args);
  * @description Perform left to right functions
  */
 export const pipe = (...fns) => value =>
-fns.reduce((acc, fn) =>
-fn(acc), value);
+	fns.reduce((acc, fn) =>
+		fn(acc), value);
 
 /**
  * 
@@ -20,5 +20,5 @@ fn(acc), value);
  * @description Perform right to left functions
  */
 export const compose = (...fns) => value =>
-    fns.reduceRight((acc, fn) =>
-        fn(acc), value);
+	fns.reduceRight((acc, fn) =>
+		fn(acc), value);
